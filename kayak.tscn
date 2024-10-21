@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2p6jo11ekjdu"]
+
+[ext_resource type="PackedScene" uid="uid://oy4agd3dtrgf" path="res://Comic_book_character9.glb" id="1_cgc5i"]
+[ext_resource type="Script" path="res://scenes/kayak1.gd" id="1_kka73"]
+[ext_resource type="Script" path="res://scenes/Camera3D.gd" id="3_24hir"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_e7acs"]
+
+[node name="Kayak" type="CharacterBody3D"]
+script = ExtResource("1_kka73")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.552964, 0, 0, 0, 0.552964, 0, 0, 0, 0.552964, 0, 0, 0)
+shape = SubResource("CylinderShape3D_e7acs")
+
+[node name="Model" parent="." instance=ExtResource("1_cgc5i")]
+transform = Transform3D(0.102899, 0, 0, 0, 0.102899, 0, 0, 0, 0.102899, -0.00298631, -0.0179005, 0.000366807)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0.173648, -0.984808, 0, 0.984808, 0.173648, 1, 7.59039e-09, -4.30473e-08, -1.33631, 0.6, 0.206174)
+fov = 62.6884
+script = ExtResource("3_24hir")

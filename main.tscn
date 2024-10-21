@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://t1hn36o8wcaq"]
+
+[ext_resource type="PackedScene" uid="uid://xpqyoxw3pase" path="res://scenes/water_3d.tscn" id="1_st3p6"]
+[ext_resource type="PackedScene" uid="uid://b2p6jo11ekjdu" path="res://scenes/kayak.tscn" id="2_5dlra"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_el65u"]
+
+[node name="main" type="Node3D"]
+
+[node name="Water" type="StaticBody3D" parent="."]
+transform = Transform3D(2.37335, 0, 0, 0, 1.10853, 0, 0, 0, 1.60026, -0.0603633, 0.212146, 0.129109)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Water"]
+transform = Transform3D(28.9442, 0, 0, 0, 21.4402, 0, 0, 0, 34.2444, -0.403493, -9.13241, -0.192428)
+shape = SubResource("BoxShape3D_el65u")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Water"]
+transform = Transform3D(0.421345, 0, 0, 0, -0.795101, 0.426134, 0, -0.295191, -0.550782, 0, 1.62057, 0)
+
+[node name="Water3D" parent="Water" instance=ExtResource("1_st3p6")]
+transform = Transform3D(24.8631, 0, 0, 0, 0.636386, 0, 0, 0, 31.741, 0, 0, 0)
+
+[node name="Kayak" parent="." instance=ExtResource("2_5dlra")]
+transform = Transform3D(0.0656999, 0, -0.976529, 0, 0.978736, 0, 0.976529, 0, 0.0656999, 0.127937, 1.15626, 0.152153)
