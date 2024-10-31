@@ -6,5 +6,5 @@ Some important references for code understanding and adapted code
 Intial setup:
 https://docs.godotengine.org/en/stable/tutorials/3d/using_transforms.html
 https://docs.godotengine.org/en/stable/getting_started/first_3d_game/01.game_setup.html
-//https://www.youtube.com/watch?v=7L6ZUYj1hs8
+https://www.youtube.com/watch?v=7L6ZUYj1hs8
 
