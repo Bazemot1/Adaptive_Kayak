@@ -1,0 +1,15 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cg7ol75e6i124"
+valid=false
+
+[deps]
+
+source_file="res://TestDataSet.csv"
+
+[params]
+
+compress=true
+delimiter=0
