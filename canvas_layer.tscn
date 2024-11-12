@@ -1,0 +1,82 @@
+[gd_scene load_steps=2 format=3 uid="uid://d27ss2yrslp54"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_aka0o"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_aka0o")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 849.0
+offset_top = -3.0
+offset_right = 2002.0
+offset_bottom = 75.0
+scale = Vector2(0.263054, 1.645)
+color = Color(0, 0, 0, 1)
+
+[node name="Velocity" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_right = 66.0
+offset_bottom = 23.0
+scale = Vector2(6.94484, 0.799079)
+text = "Velocity:"
+
+[node name="Velocity_update" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 524.608
+offset_top = 1.8237
+offset_right = 564.608
+offset_bottom = 24.8237
+scale = Vector2(4.99158, 0.690493)
+
+[node name="Z" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 4.02203
+offset_top = 17.3832
+offset_right = 89.022
+offset_bottom = 40.3832
+scale = Vector2(5.55715, 0.695433)
+text = "Z Location:"
+
+[node name="Z_update" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 524.608
+offset_top = 15.1975
+offset_right = 564.608
+offset_bottom = 38.1975
+scale = Vector2(4.6229, 1)
+
+[node name="X" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 8.04405
+offset_top = 32.8215
+offset_right = 93.0441
+offset_bottom = 55.8215
+scale = Vector2(5.63933, 0.660154)
+text = "X Location:"
+
+[node name="X_update" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 520.806
+offset_top = 29.7872
+offset_right = 560.806
+offset_bottom = 52.7872
+scale = Vector2(4.19328, 1)
+
+[node name="Time" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 4.02203
+offset_top = 49.84
+offset_right = 47.022
+offset_bottom = 72.84
+scale = Vector2(6.47686, 0.673445)
+text = "Time:"
+
+[node name="TIme_update" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 307.922
+offset_top = 46.2005
+offset_right = 347.922
+offset_bottom = 69.2005
+scale = Vector2(3.88914, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
