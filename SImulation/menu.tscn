@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://dl4pnlxaryhjp"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_rlb56"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rlb56")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 431.0
+offset_top = 213.0
+offset_right = 530.0
+offset_bottom = 279.0
+scale = Vector2(3.23306, 3.08933)
+alignment = 1
+
+[node name="Preset_Data" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Preset Data"
+
+[node name="User_Input" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "User Input"
+
+[connection signal="pressed" from="VBoxContainer/Preset_Data" to="." method="_on_preset_data_pressed"]
+[connection signal="pressed" from="VBoxContainer/User_Input" to="." method="_on_user_input_pressed"]
