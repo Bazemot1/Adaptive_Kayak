@@ -52,7 +52,7 @@ func physics_Calc(delta):
 	current_position_x = myNode.global_position.x/60
 	current_position_y = myNode.global_position.y/60
 	current_position_z = myNode.global_position.z/60
-	if wait > 1.0:		
+	if wait > 0.5:		
 		# Add "current_Velocity" to UI
 		current_Velocity = ( sqrt(
 		(current_position_x-previous_position_x)**2 +
