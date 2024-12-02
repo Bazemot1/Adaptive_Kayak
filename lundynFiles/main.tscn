@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxykuesbyps44"]
+
+[ext_resource type="PackedScene" path="res://Water_3d.tscn" id="1_st3p6"]
+[ext_resource type="Script" path="res://ui_user_input.gd" id="1_x5nlw"]
+[ext_resource type="PackedScene" uid="uid://b2p6jo11ekjdu" path="res://kayak.tscn" id="2_5dlra"]
+[ext_resource type="PackedScene" uid="uid://ut01lkhehhhw" path="res://buoy.tscn" id="3_fvr5y"]
+[ext_resource type="PackedScene" uid="uid://cs121cqcewpug" path="res://canvas_layer_Kayak_User_Input.tscn" id="4_ka2p2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_el65u"]
+size = Vector3(0.891296, 0.19323, 1.09692)
+
+[node name="main" type="Node3D"]
+
+[node name="Water" type="StaticBody3D" parent="."]
+transform = Transform3D(200, 0, 0, 0, 200, 0, 0, 0, 200, 0, -59.0613, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Water"]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, -2.58, 0)
+shape = SubResource("BoxShape3D_el65u")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Water"]
+transform = Transform3D(1, 0, 0, 0, -0.937476, 0.348049, 0, -0.348049, -0.937476, 0, 1.62057, 0)
+
+[node name="Water3D" parent="Water" instance=ExtResource("1_st3p6")]
+transform = Transform3D(24.8631, 0, 0, 0, 0.636386, 0, 0, 0, 31.741, -0.093, 0, -0.847)
+
+[node name="Kayak" parent="." instance=ExtResource("2_5dlra")]
+transform = Transform3D(0.0656999, 0, -0.976529, 0, 0.978736, 0, 0.976529, 0, 0.0656999, 0.65, 9.88109, 0.287)
+
+[node name="CanvasLayer" parent="Kayak" instance=ExtResource("4_ka2p2")]
+script = ExtResource("1_x5nlw")
+
+[node name="Buoy\'s" parent="." instance=ExtResource("3_fvr5y")]
+transform = Transform3D(13.3102, 0, 0, 0, 11.1723, 0, 0, 0, 10.2571, -84.7836, 8.02261, 0)
+
+[node name="Node3D" parent="Buoy\'s" instance=ExtResource("3_fvr5y")]
+transform = Transform3D(1.29563, 0, 0, 0, 1.10635, 0, 0, 0, 1.40513, 32.8926, 0.0206585, -7.4285)
+
+[node name="Node3D" parent="Buoy\'s/Node3D" instance=ExtResource("3_fvr5y")]
+transform = Transform3D(1.29563, 0, 0, 0, 1.10635, 0, 0, 0, 1.40513, -48.8841, 0.0206585, 75.5722)
+
+[node name="Node3D2" parent="Buoy\'s/Node3D" instance=ExtResource("3_fvr5y")]
+transform = Transform3D(1.29563, 0, 0, 0, 1.10635, 0, 0, 0, 1.40513, -56.8443, 0.0206585, -57.9347)
+
+[node name="Node3D4" parent="Buoy\'s/Node3D" instance=ExtResource("3_fvr5y")]
+transform = Transform3D(1.29563, 0, 0, 0, 1.10635, 0, 0, 0, 1.40513, -91.6757, 0.0206585, 5.36828)
+
+[node name="Node3D5" parent="Buoy\'s/Node3D" instance=ExtResource("3_fvr5y")]
+transform = Transform3D(1.29563, 0, 0, 0, 1.10635, 0, 0, 0, 1.40513, 7.96093, 0.0206585, 75.9426)
+
+[node name="Node3D6" parent="Buoy\'s/Node3D" instance=ExtResource("3_fvr5y")]
+transform = Transform3D(1.29563, 0, 0, 0, 1.10635, 0, 0, 0, 1.40513, 9.53583, 0.0206585, -58.2785)
+
+[node name="Node3D7" parent="Buoy\'s/Node3D" instance=ExtResource("3_fvr5y")]
+transform = Transform3D(1.29563, 0, 0, 0, 1.10635, 0, 0, 0, 1.40513, 41.9283, 0.0206585, 5.80224)
+
+[node name="Node3D8" parent="Buoy\'s/Node3D" instance=ExtResource("3_fvr5y")]
+transform = Transform3D(1.29563, 0, 0, 0, 1.10635, 0, 0, 0, 1.40513, -134.579, 0.0206388, -126.471)
+
+[node name="Node3D9" parent="Buoy\'s/Node3D" instance=ExtResource("3_fvr5y")]
+transform = Transform3D(1.29563, 0, 0, 0, 1.10635, 0, 0, 0, 1.40513, 82.8045, 0.0206782, -117.546)
+
+[node name="Node3D10" parent="Buoy\'s/Node3D" instance=ExtResource("3_fvr5y")]
+transform = Transform3D(1.29563, 0, 0, 0, 1.10635, 0, 0, 0, 1.40513, -136.465, 0.0206585, 119.291)
+
+[node name="Node3D12" parent="Buoy\'s/Node3D" instance=ExtResource("3_fvr5y")]
+transform = Transform3D(1.29563, 0, 0, 0, 1.10635, 0, 0, 0, 1.40513, -24.9268, 0.0206585, -137.894)
+
+[node name="Node3D13" parent="Buoy\'s/Node3D" instance=ExtResource("3_fvr5y")]
+transform = Transform3D(1.29563, 0, 0, 0, 1.10635, 0, 0, 0, 1.40513, 104.557, 0.0206585, 132.172)
+
+[node name="Node3D14" parent="Buoy\'s/Node3D" instance=ExtResource("3_fvr5y")]
+transform = Transform3D(1.29563, 0, 0, 0, 1.10635, 0, 0, 0, 1.40513, -144.659, 0.0206585, -0.811211)
+
+[node name="Node3D15" parent="Buoy\'s/Node3D" instance=ExtResource("3_fvr5y")]
+transform = Transform3D(1.29563, 0, 0, 0, 1.10635, 0, 0, 0, 1.40513, -20.0888, 0.0206585, 128.719)
+
+[node name="Node3D16" parent="Buoy\'s/Node3D" instance=ExtResource("3_fvr5y")]
+transform = Transform3D(1.29563, 0, 0, 0, 1.10635, 0, 0, 0, 1.40513, 103.801, 0.0206585, -0.784637)

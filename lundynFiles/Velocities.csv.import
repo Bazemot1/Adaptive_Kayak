@@ -1,0 +1,15 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cxqvqpvq01cur"
+valid=false
+
+[deps]
+
+source_file="res://Velocities.csv"
+
+[params]
+
+compress=true
+delimiter=0

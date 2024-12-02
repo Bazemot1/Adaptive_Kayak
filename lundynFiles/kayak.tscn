@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2p6jo11ekjdu"]
+
+[ext_resource type="Script" path="res://kayak1.gd" id="1_kka73"]
+[ext_resource type="Script" path="res://Camera3D.gd" id="3_24hir"]
+[ext_resource type="PackedScene" uid="uid://cpj15testja8i" path="res://KayakAssembly.tscn" id="3_nocdr"]
+[ext_resource type="PackedScene" uid="uid://bf7r30rbmju2" path="res://linkageAssembly.tscn" id="4_waoxw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vwbxf"]
+size = Vector3(8.59976, 0.645569, 1.96997)
+
+[node name="Kayak" type="CharacterBody3D"]
+script = ExtResource("1_kka73")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.625, 0, 0, 0, 0.625, 0, 0, 0, 0.625, 2.29404, 0.147122, -0.240199)
+shape = SubResource("BoxShape3D_vwbxf")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.03551, 0.173538, -0.984187, 0, 0.984808, 0.173648, 0.999369, 0.00616624, -0.0349706, 2.08839, 0.415194, -0.411074)
+fov = 62.6884
+script = ExtResource("3_24hir")
+
+[node name="Camera3D2" type="Camera3D" parent="."]
+transform = Transform3D(0.052336, 0.17341, -0.983458, 0, 0.984808, 0.173648, 0.99863, -0.00908803, 0.0515409, -1.25251, 0.910716, 0.23799)
+fov = 63.0
+
+[node name="Camera3D3" type="Camera3D" parent="."]
+transform = Transform3D(0.999707, 0.00299895, -0.0240189, 0, 0.992295, 0.123896, 0.0242054, -0.12386, 0.992004, 2.16914, 0.534148, 1.64488)
+
+[node name="Default - <Default>_Display State 2" parent="." instance=ExtResource("3_nocdr")]
+transform = Transform3D(0.999999, 0, 0, 0, 0.997564, -0.0697565, 0, 0.0697565, 0.997564, 0.3, -0.25, -1.2)
+
+[node name="LinkageAssembly" parent="." instance=ExtResource("4_waoxw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.69467, 0.0961758, -0.460767)
+script = null

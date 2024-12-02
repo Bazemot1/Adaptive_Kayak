@@ -1,0 +1,143 @@
+[gd_scene load_steps=18 format=3 uid="uid://bf7r30rbmju2"]
+
+[ext_resource type="Script" path="res://linkage_assembly.gd" id="1_wq3sb"]
+[ext_resource type="PackedScene" uid="uid://cepgaj4tokcpg" path="res://modelFiles/base/base.gltf" id="1_y3woy"]
+[ext_resource type="PackedScene" uid="uid://b7xmoywykhrhe" path="res://modelFiles/crank/crank.gltf" id="2_bh31m"]
+[ext_resource type="PackedScene" uid="uid://c7deh6kpohbg1" path="res://modelFiles/crank_pin/crank_pin.gltf" id="3_4w1yt"]
+[ext_resource type="PackedScene" uid="uid://cvyy4ml63mjon" path="res://modelFiles/triangular_coupler/triangular_coupler.gltf" id="4_ycyrr"]
+[ext_resource type="PackedScene" uid="uid://c27pxuv4i36og" path="res://modelFiles/rocker/rocker.gltf" id="5_l6gkf"]
+[ext_resource type="PackedScene" uid="uid://cg8kn62sks5tu" path="res://modelFiles/rocker_pin/rocker_pin.gltf" id="6_fyfib"]
+[ext_resource type="PackedScene" uid="uid://cpppgss82chr6" path="res://modelFiles/rocker_top_pin/rocker_top_pin.gltf" id="7_30fwk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_whidw"]
+size = Vector3(0.0335655, 0.0108032, 0.0497971)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6c83n"]
+height = 0.0504273
+radius = 0.00370552
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4plhu"]
+size = Vector3(0.0327759, 0.0116119, 0.0482178)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dqws0"]
+size = Vector3(0.0309753, 0.0167999, 0.149484)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1wike"]
+radius = 0.0112271
+height = 0.180619
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3v810"]
+height = 0.0820908
+radius = 0.00500198
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_f653h"]
+height = 0.0509373
+radius = 0.00644856
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xpkke"]
+size = Vector3(0.286987, 0.0687866, 0.152954)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h7w4y"]
+size = Vector3(0.220398, 0.0538025, 0.115479)
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_wq3sb")
+
+[node name="Base" parent="." instance=ExtResource("1_y3woy")]
+
+[node name="Crank_Z_Pos_Origin" type="Node3D" parent="Base"]
+transform = Transform3D(0.994403, -4.6184e-09, -0.105657, -0.105657, -4.34667e-08, -0.994403, -1.13867e-15, 1, -4.37114e-08, 0.0190609, 0.139868, 0.0472128)
+
+[node name="Crank_Z_Pos" parent="Base/Crank_Z_Pos_Origin" instance=ExtResource("2_bh31m")]
+transform = Transform3D(1, 6.93895e-18, 1.54687e-23, -2.45264e-18, 1, 3.55271e-15, 1.16329e-23, 0, 1, -0.0158406, 3.72529e-09, 0.0161624)
+
+[node name="Crank_Z_Neg_Origin" type="Node3D" parent="Base/Crank_Z_Pos_Origin/Crank_Z_Pos"]
+transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 8.74228e-08, -1, 8.74228e-08, -3.82137e-15, 8.74228e-08, 1, 0.0162196, -0.0176417, -0.0161803)
+
+[node name="Crank_Z_Neg" parent="Base/Crank_Z_Pos_Origin/Crank_Z_Pos/Crank_Z_Neg_Origin" instance=ExtResource("2_bh31m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0158406, 0, 0.0161624)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Base/Crank_Z_Pos_Origin/Crank_Z_Pos/Crank_Z_Neg_Origin/Crank_Z_Neg"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Base/Crank_Z_Pos_Origin/Crank_Z_Pos/Crank_Z_Neg_Origin/Crank_Z_Neg/RigidBody3D"]
+transform = Transform3D(1, 0, 3.8216e-15, -5.22249e-12, 1, -2.61124e-12, 3.8216e-15, 0, 1, 0.0157817, 0.0073615, -0.0480844)
+shape = SubResource("BoxShape3D_whidw")
+
+[node name="Crank_Pin" parent="Base/Crank_Z_Pos_Origin/Crank_Z_Pos" instance=ExtResource("3_4w1yt")]
+transform = Transform3D(1, -2.12607e-22, 0, 1.67037e-22, -1, -3.17865e-08, -7.30144e-30, 3.17865e-08, -1, 0.0155594, 0.0151803, -0.0800891)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Base/Crank_Z_Pos_Origin/Crank_Z_Pos/Crank_Pin"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Base/Crank_Z_Pos_Origin/Crank_Z_Pos/Crank_Pin/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 1.23605e-16, 1, -3.55271e-15, -1.47132e-23, 0, 1, 0.000443937, 0.0237365, 4.71622e-05)
+shape = SubResource("CylinderShape3D_6c83n")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Base/Crank_Z_Pos_Origin/Crank_Z_Pos"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Base/Crank_Z_Pos_Origin/Crank_Z_Pos/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 6.02104e-14, 1, 0, -2.57364e-21, 0, 1, 0.0160426, 0.00768629, -0.047712)
+shape = SubResource("BoxShape3D_4plhu")
+
+[node name="Triangular_Coupler" parent="Base/Crank_Z_Pos_Origin" instance=ExtResource("4_ycyrr")]
+transform = Transform3D(1, 0, 0, 1.57918e-16, 1, 3.55271e-14, 1.25089e-23, 0, 1, 0.278761, -0.0175407, -0.0437983)
+
+[node name="Rocker_Z_Neg_Origin" type="Node3D" parent="Base/Crank_Z_Pos_Origin/Triangular_Coupler"]
+transform = Transform3D(-0.945399, 8.47983e-08, -0.325915, -9.75735e-08, -1, 2.28515e-08, -0.325915, 5.34044e-08, 0.945399, -0.130223, 0.000289973, 0.151406)
+
+[node name="Rocker_Z_Neg" parent="Base/Crank_Z_Pos_Origin/Triangular_Coupler/Rocker_Z_Neg_Origin" instance=ExtResource("5_l6gkf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0165152, 0, 0.0148016)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Base/Crank_Z_Pos_Origin/Triangular_Coupler/Rocker_Z_Neg_Origin/Rocker_Z_Neg"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Base/Crank_Z_Pos_Origin/Triangular_Coupler/Rocker_Z_Neg_Origin/Rocker_Z_Neg/RigidBody3D"]
+transform = Transform3D(1, 7.10543e-15, 2.98023e-08, -2.75691e-12, 1, -6.89226e-13, -2.98023e-08, 0, 1, 0.0227401, 0.00874083, -0.105772)
+shape = SubResource("BoxShape3D_dqws0")
+
+[node name="Rocker_Z_Pos" parent="Base/Crank_Z_Pos_Origin/Triangular_Coupler/Rocker_Z_Neg_Origin" instance=ExtResource("5_l6gkf")]
+transform = Transform3D(1, 0, 3.82137e-15, 0, 1, 0, 3.82137e-15, 0, 1, -0.0166429, -0.0319042, 0.0152891)
+
+[node name="HingeJoint3D" type="HingeJoint3D" parent="Base/Crank_Z_Pos_Origin/Triangular_Coupler/Rocker_Z_Neg_Origin/Rocker_Z_Pos"]
+transform = Transform3D(-0.96064, 0.277777, 0.00372047, 0.00282167, 0.023148, -0.999729, -0.277788, -0.960367, -0.0230206, 0.0171887, 0.0229546, -0.0156649)
+node_a = NodePath("../RigidBody3D")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Base/Crank_Z_Pos_Origin/Triangular_Coupler/Rocker_Z_Neg_Origin/Rocker_Z_Pos"]
+transform = Transform3D(1, 7.10543e-15, 2.98023e-08, -7.10543e-15, 1, -1.77636e-15, -2.98023e-08, 0, 1, 0.0212052, -3.72529e-09, -0.0137781)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Base/Crank_Z_Pos_Origin/Triangular_Coupler/Rocker_Z_Neg_Origin/Rocker_Z_Pos/RigidBody3D"]
+transform = Transform3D(-0.335712, -0.086753, 0.937961, -0.941964, 0.0298328, -0.334386, 0.00102697, -0.995783, -0.0917332, 4.24683e-06, 0.0062428, -0.103678)
+shape = SubResource("CapsuleShape3D_1wike")
+
+[node name="Rocker_Pin" parent="Base/Crank_Z_Pos_Origin/Triangular_Coupler/Rocker_Z_Neg_Origin" instance=ExtResource("6_fyfib")]
+transform = Transform3D(1, 0, 3.82137e-15, 0, 1, 0, 3.82137e-15, 0, 1, 0, -0.0461804, 0)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Base/Crank_Z_Pos_Origin/Triangular_Coupler/Rocker_Z_Neg_Origin/Rocker_Pin"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Base/Crank_Z_Pos_Origin/Triangular_Coupler/Rocker_Z_Neg_Origin/Rocker_Pin/RigidBody3D"]
+transform = Transform3D(1, 7.10543e-15, 2.98023e-08, -3.55271e-14, 1, -8.88178e-15, -2.98023e-08, 0, 1, 0.000676081, 0.0366661, 0.000510976)
+shape = SubResource("CylinderShape3D_3v810")
+
+[node name="Rocker_Pin_Top" parent="Base/Crank_Z_Pos_Origin/Triangular_Coupler/Rocker_Z_Neg_Origin" instance=ExtResource("7_30fwk")]
+transform = Transform3D(1, 7.10543e-15, 2.98023e-08, -7.81597e-14, 1, -1.95399e-14, -2.98023e-08, 0, 1, 0.000299826, -0.0318287, -0.180037)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Base/Crank_Z_Pos_Origin/Triangular_Coupler/Rocker_Z_Neg_Origin/Rocker_Pin_Top"]
+transform = Transform3D(1, 0, 1.53932e-15, 0, 1, -3.19744e-14, 1.53932e-15, 0, 1, 1.18315e-05, 0.0235986, -0.000241101)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Base/Crank_Z_Pos_Origin/Triangular_Coupler/Rocker_Z_Neg_Origin/Rocker_Pin_Top/RigidBody3D"]
+transform = Transform3D(1, 0, 1.53932e-15, 0, 1, -3.55271e-15, 1.53932e-15, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_f653h")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Base/Crank_Z_Pos_Origin/Triangular_Coupler"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Base/Crank_Z_Pos_Origin/Triangular_Coupler/RigidBody3D"]
+transform = Transform3D(1, 4.44089e-14, -1.94123e-23, -2.05006e-13, 1, -1.35714e-12, 8.98052e-21, -1.49214e-13, 1, -0.203308, 0.0104065, -0.121521)
+shape = SubResource("BoxShape3D_xpkke")
+
+[node name="Camera3D" type="Camera3D" parent="Base/Crank_Z_Pos_Origin"]
+transform = Transform3D(0.997389, -0.0692384, 0.0205405, -0.0439012, -0.355415, 0.933677, -0.057346, -0.932141, -0.357526, 0.0826587, 0.471305, -0.257517)
+fov = 66.8034
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Base"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Base/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0896203, -0.0254171, 0.0391191)
+shape = SubResource("BoxShape3D_h7w4y")

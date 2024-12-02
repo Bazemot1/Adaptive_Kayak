@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ut01lkhehhhw"]
+
+[ext_resource type="PackedScene" uid="uid://c2l88jvrwbaxy" path="res://modelFiles/marker_buoy.gltf" id="1_wi1au"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_how0h"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Default - <Default>_Display State 1" parent="." instance=ExtResource("1_wi1au")]
+transform = Transform3D(4.86505, 0, 0, 0, 4.16196, 0, 0, 0, 5.2423, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Default - <Default>_Display State 1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.944786, 0)
+shape = SubResource("CylinderShape3D_how0h")
