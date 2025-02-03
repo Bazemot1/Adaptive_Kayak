@@ -1,0 +1,59 @@
+{
+	"asset": {
+		"generator": "SOLIDWORKSGLTF",
+		"version" : "2.0"
+	},
+"extensionsUsed": [ "KHR_lights_punctual", "Solidworks_custom_properties"],
+	"scene" : 0,
+	"scenes": [
+		{
+			"name": "Default - <Default>_Display State 1",
+			"nodes": [
+				0, 1]
+		}
+	],
+	"nodes": [
+		{
+			"matrix": [
+				0.884418,					0,					-0.466695,					0,
+				-0.240366,					0.857167,					-0.455509,					0,
+				0.400036,					0.515038,					0.758094,					0,
+				0.181127,					0.242933,					0.363829,					1
+			]
+			,"camera": 0
+			,"name": "current"		}
+,
+		{
+			"name": "Frame_R25"		}
+	],
+	"cameras": [
+		{
+			"type": "orthographic",
+			"orthographic" : {
+				"xmag": 1,
+				"ymag" : 1,
+				"zfar" : 100,
+				"znear" : 0.01
+			}
+		}
+	],
+	"meshes" : [
+	],
+	"accessors" : [
+	],
+	"materials": [
+			{
+				"pbrMetallicRoughness": {
+					"baseColorFactor": [
+						0.498039, 0.498039, 0.498039, 1
+					]
+					,"metallicFactor": 0
+					,"roughnessFactor": 1
+				}
+			}
+	],
+	"bufferViews" : [
+	],
+	"buffers" : [
+	]
+}

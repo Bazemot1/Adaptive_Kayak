@@ -1,0 +1,135 @@
+{
+	"asset": {
+		"generator": "SOLIDWORKSGLTF",
+		"version" : "2.0"
+	},
+"extensionsUsed": [ "KHR_lights_punctual", "Solidworks_custom_properties"],
+	"scene" : 0,
+	"scenes": [
+		{
+			"name": "Default - <Default>_Display State 1",
+			"nodes": [
+				0, 1]
+		}
+	],
+	"nodes": [
+		{
+			"matrix": [
+				0.799751,					-0.0481917,					0.598395,					0,
+				0.12103,					0.989249,					-0.0820862,					0,
+				-0.588005,					0.138072,					0.796985,					0,
+				-1.28412,					0.386203,					1.93378,					1
+			]
+			,"camera": 0
+			,"name": "current"		}
+,
+		{
+			"mesh": 0
+			,"name": "Base"		}
+	],
+	"cameras": [
+		{
+			"type": "orthographic",
+			"orthographic" : {
+				"xmag": 1,
+				"ymag" : 1,
+				"zfar" : 100,
+				"znear" : 0.01
+			}
+		}
+	],
+	"meshes" : [
+		{
+			"primitives" : [
+				{
+					"attributes" : {
+					"POSITION" : 1,
+					"NORMAL" : 2,
+					"TEXCOORD_0" : 3
+					},
+					"indices" : 0,
+					"mode": 4,
+					"material" : 0
+				}
+			]
+		}
+	],
+	"accessors" : [
+			{
+				"bufferView": 3
+				,"byteOffset" : 0
+				,"componentType" : 5123
+				,"count" : 33618
+				,"type" : "SCALAR"
+			},
+			{
+				"bufferView": 0
+				,"byteOffset" : 0
+				,"componentType" : 5126
+				,"count" : 33618
+				,"type" : "VEC3"
+				,"min" : [-1.11022302e-16, -6.81127012e-02, -1.95169710e-02]
+				,"max" : [1.65069997e-01, 1.59130007e-01, 9.55169722e-02]
+			},
+			{
+				"bufferView": 1
+				,"byteOffset" : 0
+				,"componentType" : 5126
+				,"count" : 33618
+				,"type" : "VEC3"
+			},
+			{
+				"bufferView": 2
+				,"byteOffset" : 0
+				,"componentType" : 5126
+				,"count" : 33618
+				,"type" : "VEC2"
+			}
+	],
+	"materials": [
+			{
+				"pbrMetallicRoughness": {
+					"baseColorFactor": [
+						0.498039, 0.498039, 0.498039, 1
+					]
+					,"metallicFactor": 0
+					,"roughnessFactor": 1
+				}
+			}
+	],
+	"bufferViews" : [
+			{
+				"buffer": 0
+				,"byteOffset" : 0
+				,"byteLength" : 403416
+				,"byteStride" : 12
+				,"target" : 34962
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 403416
+				,"byteLength" : 403416
+				,"byteStride" : 12
+				,"target" : 34962
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 806832
+				,"byteLength" : 268944
+				,"byteStride" : 8
+				,"target" : 34962
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 1075776
+				,"byteLength" : 67236
+				,"target" : 34963
+			}
+	],
+	"buffers" : [
+			{
+				"byteLength": 1143012
+				,"uri" : "Base.bin"
+			}
+	]
+}

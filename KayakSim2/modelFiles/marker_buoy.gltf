@@ -1,0 +1,245 @@
+{
+	"asset": {
+		"generator": "SOLIDWORKSGLTF",
+		"version" : "2.0"
+	},
+"extensionsUsed": [ "KHR_lights_punctual", "Solidworks_custom_properties"],
+	"scene" : 0,
+	"scenes": [
+		{
+			"name": "Default - <Default>_Display State 1",
+			"nodes": [
+				0, 1]
+		}
+	],
+	"nodes": [
+		{
+			"matrix": [
+				0.884418,					0,					-0.466695,					0,
+				-0.240366,					0.857167,					-0.455509,					0,
+				0.400036,					0.515038,					0.758094,					0,
+				4.36544,					6.12408,					8.66975,					1
+			]
+			,"camera": 0
+			,"name": "current"		}
+,
+		{
+			"mesh": 0
+			,"name": "marker buoy.SLDPRT"		}
+	],
+	"cameras": [
+		{
+			"type": "orthographic",
+			"orthographic" : {
+				"xmag": 1,
+				"ymag" : 1,
+				"zfar" : 100,
+				"znear" : 0.01
+			}
+		}
+	],
+	"meshes" : [
+		{
+			"primitives" : [
+				{
+					"attributes" : {
+					"POSITION" : 1,
+					"NORMAL" : 2,
+					"TEXCOORD_0" : 3
+					},
+					"indices" : 0,
+					"mode": 4,
+					"material" : 1
+				},
+				{
+					"attributes" : {
+					"POSITION" : 5,
+					"NORMAL" : 6,
+					"TEXCOORD_0" : 7
+					},
+					"indices" : 4,
+					"mode": 4,
+					"material" : 2
+				},
+				{
+					"attributes" : {
+					"POSITION" : 9,
+					"NORMAL" : 10,
+					"TEXCOORD_0" : 11
+					},
+					"indices" : 8,
+					"mode": 4,
+					"material" : 3
+				}
+			]
+		}
+	],
+	"accessors" : [
+			{
+				"bufferView": 3
+				,"byteOffset" : 0
+				,"componentType" : 5123
+				,"count" : 16488
+				,"type" : "SCALAR"
+			},
+			{
+				"bufferView": 0
+				,"byteOffset" : 0
+				,"componentType" : 5126
+				,"count" : 16488
+				,"type" : "VEC3"
+				,"min" : [-2.49698400e-01, -2.50009179e-01, -2.50009179e-01]
+				,"max" : [2.50009179e-01, 8.81035924e-01, 2.50009179e-01]
+			},
+			{
+				"bufferView": 1
+				,"byteOffset" : 0
+				,"componentType" : 5126
+				,"count" : 16488
+				,"type" : "VEC3"
+			},
+			{
+				"bufferView": 2
+				,"byteOffset" : 0
+				,"componentType" : 5126
+				,"count" : 16488
+				,"type" : "VEC2"
+			},
+			{
+				"bufferView": 3
+				,"byteOffset" : 32976
+				,"componentType" : 5123
+				,"count" : 546
+				,"type" : "SCALAR"
+			},
+			{
+				"bufferView": 0
+				,"byteOffset" : 197856
+				,"componentType" : 5126
+				,"count" : 546
+				,"type" : "VEC3"
+				,"min" : [-1.20480925e-01, 2.51148582e-01, -6.38016611e-02]
+				,"max" : [1.20480925e-01, 8.81035924e-01, 6.38016611e-02]
+			},
+			{
+				"bufferView": 1
+				,"byteOffset" : 197856
+				,"componentType" : 5126
+				,"count" : 546
+				,"type" : "VEC3"
+			},
+			{
+				"bufferView": 2
+				,"byteOffset" : 131904
+				,"componentType" : 5126
+				,"count" : 546
+				,"type" : "VEC2"
+			},
+			{
+				"bufferView": 3
+				,"byteOffset" : 34068
+				,"componentType" : 5123
+				,"count" : 144
+				,"type" : "SCALAR"
+			},
+			{
+				"bufferView": 0
+				,"byteOffset" : 204408
+				,"componentType" : 5126
+				,"count" : 144
+				,"type" : "VEC3"
+				,"min" : [-6.38016611e-02, 2.70171463e-01, -6.38016611e-02]
+				,"max" : [6.38016611e-02, 2.74294227e-01, 6.38016611e-02]
+			},
+			{
+				"bufferView": 1
+				,"byteOffset" : 204408
+				,"componentType" : 5126
+				,"count" : 144
+				,"type" : "VEC3"
+			},
+			{
+				"bufferView": 2
+				,"byteOffset" : 136272
+				,"componentType" : 5126
+				,"count" : 144
+				,"type" : "VEC2"
+			}
+	],
+	"materials": [
+			{
+				"pbrMetallicRoughness": {
+					"baseColorFactor": [
+						0.498039, 0.498039, 0.498039, 1
+					]
+					,"metallicFactor": 0
+					,"roughnessFactor": 1
+				}
+			},
+			{
+				"name": "color-1"
+				,"pbrMetallicRoughness": {
+					"baseColorFactor": [
+						0.792157, 0.819608, 0.933333, 1
+					]
+					,"metallicFactor": 0
+					,"roughnessFactor": 0.16
+				}
+			},
+			{
+				"name": "color"
+				,"pbrMetallicRoughness": {
+					"baseColorFactor": [
+						0, 0.752941, 0, 1
+					]
+					,"metallicFactor": 0
+					,"roughnessFactor": 0.16
+				}
+			},
+			{
+				"name": "color-2"
+				,"pbrMetallicRoughness": {
+					"baseColorFactor": [
+						0, 0, 0.752941, 1
+					]
+					,"metallicFactor": 0
+					,"roughnessFactor": 0.16
+				}
+			}
+	],
+	"bufferViews" : [
+			{
+				"buffer": 0
+				,"byteOffset" : 0
+				,"byteLength" : 206136
+				,"byteStride" : 12
+				,"target" : 34962
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 206136
+				,"byteLength" : 206136
+				,"byteStride" : 12
+				,"target" : 34962
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 412272
+				,"byteLength" : 137424
+				,"byteStride" : 8
+				,"target" : 34962
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 549696
+				,"byteLength" : 34356
+				,"target" : 34963
+			}
+	],
+	"buffers" : [
+			{
+				"byteLength": 584052
+				,"uri" : "marker_buoy.SLDPRT.bin"
+			}
+	]
+}

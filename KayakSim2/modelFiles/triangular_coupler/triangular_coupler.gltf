@@ -1,0 +1,135 @@
+{
+	"asset": {
+		"generator": "SOLIDWORKSGLTF",
+		"version" : "2.0"
+	},
+"extensionsUsed": [ "KHR_lights_punctual", "Solidworks_custom_properties"],
+	"scene" : 0,
+	"scenes": [
+		{
+			"name": "Default - <Default>_Display State 1",
+			"nodes": [
+				0, 1]
+		}
+	],
+	"nodes": [
+		{
+			"matrix": [
+				0.986251,					0.139091,					0.0892354,					0,
+				0.0869084,					0.0227272,					-0.995957,					0,
+				-0.140556,					0.990019,					0.0103265,					0,
+				-0.611969,					3.42675,					-0.0413508,					1
+			]
+			,"camera": 0
+			,"name": "current"		}
+,
+		{
+			"mesh": 0
+			,"name": "Triangular Coupler"		}
+	],
+	"cameras": [
+		{
+			"type": "orthographic",
+			"orthographic" : {
+				"xmag": 1,
+				"ymag" : 1,
+				"zfar" : 100,
+				"znear" : 0.01
+			}
+		}
+	],
+	"meshes" : [
+		{
+			"primitives" : [
+				{
+					"attributes" : {
+					"POSITION" : 1,
+					"NORMAL" : 2,
+					"TEXCOORD_0" : 3
+					},
+					"indices" : 0,
+					"mode": 4,
+					"material" : 0
+				}
+			]
+		}
+	],
+	"accessors" : [
+			{
+				"bufferView": 3
+				,"byteOffset" : 0
+				,"componentType" : 5123
+				,"count" : 16686
+				,"type" : "SCALAR"
+			},
+			{
+				"bufferView": 0
+				,"byteOffset" : 0
+				,"componentType" : 5126
+				,"count" : 16686
+				,"type" : "VEC3"
+				,"min" : [-3.44285458e-01, -8.67361738e-19, -1.98952302e-01]
+				,"max" : [1.17549435e-38, 1.79999992e-02, 2.29850861e-17]
+			},
+			{
+				"bufferView": 1
+				,"byteOffset" : 0
+				,"componentType" : 5126
+				,"count" : 16686
+				,"type" : "VEC3"
+			},
+			{
+				"bufferView": 2
+				,"byteOffset" : 0
+				,"componentType" : 5126
+				,"count" : 16686
+				,"type" : "VEC2"
+			}
+	],
+	"materials": [
+			{
+				"pbrMetallicRoughness": {
+					"baseColorFactor": [
+						0.498039, 0.498039, 0.498039, 1
+					]
+					,"metallicFactor": 0
+					,"roughnessFactor": 1
+				}
+			}
+	],
+	"bufferViews" : [
+			{
+				"buffer": 0
+				,"byteOffset" : 0
+				,"byteLength" : 200232
+				,"byteStride" : 12
+				,"target" : 34962
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 200232
+				,"byteLength" : 200232
+				,"byteStride" : 12
+				,"target" : 34962
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 400464
+				,"byteLength" : 133488
+				,"byteStride" : 8
+				,"target" : 34962
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 533952
+				,"byteLength" : 33372
+				,"target" : 34963
+			}
+	],
+	"buffers" : [
+			{
+				"byteLength": 567324
+				,"uri" : "Triangular_Coupler.bin"
+			}
+	]
+}

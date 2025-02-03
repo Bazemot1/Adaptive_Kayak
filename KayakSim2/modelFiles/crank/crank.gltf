@@ -1,0 +1,135 @@
+{
+	"asset": {
+		"generator": "SOLIDWORKSGLTF",
+		"version" : "2.0"
+	},
+"extensionsUsed": [ "KHR_lights_punctual", "Solidworks_custom_properties"],
+	"scene" : 0,
+	"scenes": [
+		{
+			"name": "Default - <Default>_Display State 1",
+			"nodes": [
+				0, 1]
+		}
+	],
+	"nodes": [
+		{
+			"matrix": [
+				0.824971,					0.0599947,					-0.561982,					0,
+				-0.519675,					0.471407,					-0.71254,					0,
+				0.222174,					0.879873,					0.420075,					0,
+				0.213913,					0.863773,					0.379415,					1
+			]
+			,"camera": 0
+			,"name": "current"		}
+,
+		{
+			"mesh": 0
+			,"name": "Crank"		}
+	],
+	"cameras": [
+		{
+			"type": "orthographic",
+			"orthographic" : {
+				"xmag": 1,
+				"ymag" : 1,
+				"zfar" : 100,
+				"znear" : 0.01
+			}
+		}
+	],
+	"meshes" : [
+		{
+			"primitives" : [
+				{
+					"attributes" : {
+					"POSITION" : 1,
+					"NORMAL" : 2,
+					"TEXCOORD_0" : 3
+					},
+					"indices" : 0,
+					"mode": 4,
+					"material" : 0
+				}
+			]
+		}
+	],
+	"accessors" : [
+			{
+				"bufferView": 3
+				,"byteOffset" : 0
+				,"componentType" : 5123
+				,"count" : 8064
+				,"type" : "SCALAR"
+			},
+			{
+				"bufferView": 0
+				,"byteOffset" : 0
+				,"componentType" : 5126
+				,"count" : 8064
+				,"type" : "VEC3"
+				,"min" : [0.00000000e+00, 0.00000000e+00, -9.49999988e-02]
+				,"max" : [3.20000015e-02, 3.20000015e-02, 1.17549435e-38]
+			},
+			{
+				"bufferView": 1
+				,"byteOffset" : 0
+				,"componentType" : 5126
+				,"count" : 8064
+				,"type" : "VEC3"
+			},
+			{
+				"bufferView": 2
+				,"byteOffset" : 0
+				,"componentType" : 5126
+				,"count" : 8064
+				,"type" : "VEC2"
+			}
+	],
+	"materials": [
+			{
+				"pbrMetallicRoughness": {
+					"baseColorFactor": [
+						0.498039, 0.498039, 0.498039, 1
+					]
+					,"metallicFactor": 0
+					,"roughnessFactor": 1
+				}
+			}
+	],
+	"bufferViews" : [
+			{
+				"buffer": 0
+				,"byteOffset" : 0
+				,"byteLength" : 96768
+				,"byteStride" : 12
+				,"target" : 34962
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 96768
+				,"byteLength" : 96768
+				,"byteStride" : 12
+				,"target" : 34962
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 193536
+				,"byteLength" : 64512
+				,"byteStride" : 8
+				,"target" : 34962
+			},
+			{
+				"buffer": 0
+				,"byteOffset" : 258048
+				,"byteLength" : 16128
+				,"target" : 34963
+			}
+	],
+	"buffers" : [
+			{
+				"byteLength": 274176
+				,"uri" : "Crank-1.bin"
+			}
+	]
+}
