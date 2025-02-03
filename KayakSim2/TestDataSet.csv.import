@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cflyeqil268ms"
+
+[deps]
+
+files=["res://TestDataSet.z.translation", "res://TestDataSet.x.translation", "res://TestDataSet.y.translation", "res://TestDataSet.vel.translation", "res://TestDataSet.accel.translation", "res://TestDataSet.rot.translation", "res://TestDataSet.UserForce.translation", "res://TestDataSet.Voltage1.translation", "res://TestDataSet.Voltage2.translation", "res://TestDataSet.Voltage3.translation"]
+
+source_file="res://TestDataSet.csv"
+dest_files=["res://TestDataSet.z.translation", "res://TestDataSet.x.translation", "res://TestDataSet.y.translation", "res://TestDataSet.vel.translation", "res://TestDataSet.accel.translation", "res://TestDataSet.rot.translation", "res://TestDataSet.UserForce.translation", "res://TestDataSet.Voltage1.translation", "res://TestDataSet.Voltage2.translation", "res://TestDataSet.Voltage3.translation"]
+
+[params]
+
+compress=true
+delimiter=0
